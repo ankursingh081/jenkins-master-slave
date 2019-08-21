@@ -3,7 +3,6 @@ pipeline {
 
     stages {
         stage('Build') {
-	String full_image_name = 'ankursingh081/jenkins-master-slave'
             steps {
                 echo 'Building..'
 		 int build_tag_res = sh script: "docker build -t ${full_image_name} Dockerfile", returnStatus: true
