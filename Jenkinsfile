@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
 	    steps {
                 echo 'Building..'
-		sh"/usr/bin/docker build -t ankursingh081/jenkins-master-slave Dockerfile"
+		sh"docker build -t jenkins-master-slave Dockerfile"
 		
             }
         }
