@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
 	    steps {
                 echo 'Building..'
-		sh"docker build -t jenkins-master-slave Dockerfile"
+		sh"fastlane init"
 		
             }
         }
