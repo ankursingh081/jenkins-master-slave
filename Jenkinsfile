@@ -67,49 +67,49 @@ pipeline {
             }
         }
 
-        stage('Build application for beta') {
-            when {
-                expression {
-                    return env.shouldBuild != "false"
-                }
-            }
+//        stage('Build application for beta') {
+//            when {
+//                expression {
+//                    return env.shouldBuild != "false"
+//                }
+//            }
 //            steps {
 //                // Steps for beta build
 //            }
-        }
+//        }
 
-        stage('Deploy to beta') {
-            when {
-                expression {
-                    return env.shouldBuild != "false"
-                }
-            }
+//        stage('Deploy to beta') {
+//            when {
+//                expression {
+//                    return env.shouldBuild != "false"
+//                }
+//            }
 //            steps {
 //                // Build steps to deploy application to beta
 //            }
-        }
+//        }
 
-        stage('Build application for prod') {
-            when {
-                expression {
-                    return env.shouldBuild != "false" && env.BRANCH_NAME == "master"
-                }
-            }
+//        stage('Build application for prod') {
+//            when {
+//                expression {
+//                    return env.shouldBuild != "false" && env.BRANCH_NAME == "master"
+//                }
+//            }
 //            steps {
 //                // Build steps to build application for prod
 //            }
-        }
+//        }
 
-        stage('Send to Prod') {
-            when {
-                expression {
-                    return env.shouldBuild != "false" && env.BRANCH_NAME == "master"
-                }
-            }
+//        stage('Send to Prod') {
+//            when {
+//                expression {
+//                    return env.shouldBuild != "false" && env.BRANCH_NAME == "master"
+//                }
+//            }
 //            steps {
 //                // Steps to deploy application to prod
 //            }
-        }
+        }/
 
         stage('Inform Slack for success') {
             when {
