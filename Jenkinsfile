@@ -109,7 +109,7 @@ pipeline {
 //            steps {
 //                // Steps to deploy application to prod
 //            }
-        }/
+//        }
 
         stage('Inform Slack for success') {
             when {
