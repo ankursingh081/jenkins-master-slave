@@ -1,7 +1,7 @@
 node {
 	stage 'Checkout and Setup'
 		checkout scm
-		sh 'cd fastlane'
+//		sh 'cd fastlane'
 	stage 'Lint'
 		sh 'fastlane lint'
 	stage 'Test'
